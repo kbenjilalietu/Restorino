@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner signature="Workspace" version="15.1.0.2850"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Workspace>
+	<Local Expanded="Yes">
+		<Model Expanded="Yes" ID="{37714224-2E08-40AE-A728-59F7AFBD0CE6}" Loaded="No" Name="DCU global" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="DCU global.moo"/>
+		<Model Expanded="Yes" ID="{D1FC83E2-200A-4944-A562-0C2C027D3C23}" Loaded="No" Name="DCU de serveur" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="DCU de serveur.moo"/>
+		<Model Expanded="Yes" ID="{FD4D3F08-1395-4FF8-BDA5-73ED062F9B13}" Loaded="No" Name="DCU de cuisinier" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="DCU de cuisinier.moo"/>
+		<Model Expanded="Yes" ID="{7A1A94E9-1EF7-46AA-9AFD-07F11A647E6A}" Loaded="No" Name="DCU de caisier" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="DCU de caisier.moo"/>
+		<Model Expanded="Yes" ID="{3B5498AC-1E76-471B-9029-CFE76D8C2778}" Loaded="No" Name="DCU de l&#39;admin" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="DCU de l&#39;admin.moo"/>
+		<Model Expanded="Yes" ID="{ECAF1757-B54E-4E8A-B8BE-F2A65A5AE52E}" Loaded="No" Name="Gestion des catégories" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Gestion des catégories.moo"/>
+		<Model Expanded="Yes" ID="{24B04E64-B77A-44B8-BFD1-7A6BEDF8989E}" Loaded="No" Name="Gestion des comptes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Gestion des comptes.moo"/>
+		<Model Expanded="Yes" ID="{9A2EEE5F-93C4-468F-B326-D51C26B50D4C}" Loaded="No" Name="ModeleOrienteObjet_3" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="ModeleOrienteObjet_3.moo"/>
+		<Model Expanded="Yes" ID="{77956CD7-8126-4C60-8155-EB8DE33C05BD}" Loaded="No" Name="authentification" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="DS global.moo"/>
+		<Model Expanded="Yes" ID="{D94D5FF5-C638-43C4-A123-D5DA33362DFD}" Loaded="No" Name="Passer une commande" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Passer une commande.moo"/>
+		<Model Expanded="Yes" ID="{5401059A-435D-4977-AC89-02C43DAECC27}" Name="Diagramme de classe " Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Diagramme de classe.moo"/>
+		<Model Expanded="Yes" ID="{9FA5E49F-FBDA-42B3-809A-7C1AFD17955F}" Name="modelxml" Type="{029EAF0C-06EE-4282-8CB2-D70732085DEF}" URL="modelxml.msx"/>
+		<Model Expanded="Yes" ID="{93541BB6-CF61-4B9A-B2B5-A1882001DD9F}" Name="Diagramme de classe" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="Diagramme de classe.mcd"/>
+		<Model Expanded="Yes" ID="{5EA972DB-386E-4216-AEF0-4697856730C9}" Name="Diagramme de classe" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="Diagramme de classe.mpd"/>
+	</Local>
+	<BrowserModule Name="Référentiel"/>
+</Workspace>

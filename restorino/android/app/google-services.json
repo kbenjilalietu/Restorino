@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "467642481747",
+    "firebase_url": "https://restorino-654fe-default-rtdb.firebaseio.com",
+    "project_id": "restorino-654fe",
+    "storage_bucket": "restorino-654fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467642481747:android:1d968aa3b9af7cc27f1aa6",
+        "android_client_info": {
+          "package_name": "com.example.restorino"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467642481747-lb9i53rd4q9r1udc4ug2on4ibhfau7bp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk9FM-v0Pn48aS9ma7s75n6kD0H-K5Ch8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467642481747-lb9i53rd4q9r1udc4ug2on4ibhfau7bp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
