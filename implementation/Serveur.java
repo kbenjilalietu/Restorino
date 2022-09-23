@@ -1,0 +1,78 @@
+/***********************************************************************
+ * Module:  Serveur.java
+ * Author:  dell
+ * Purpose: Defines the Class Serveur
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 69e52536-1494-4a51-bf5e-0e4314380185 */
+public class Serveur extends Personne {
+   /** @pdRoleInfo migr=no name=Commande assc=passer coll=java.util.Collection impl=java.util.HashSet mult=0..* */
+   public java.util.Collection<Commande> commande;
+   
+   
+   /** @pdGenerated default getter */
+   public java.util.Collection<Commande> getCommande() {
+      if (commande == null)
+         commande = new java.util.HashSet<Commande>();
+      return commande;
+   }
+   
+   /** @pdGenerated default iterator getter */
+   public java.util.Iterator getIteratorCommande() {
+      if (commande == null)
+         commande = new java.util.HashSet<Commande>();
+      return commande.iterator();
+   }
+   
+   /** @pdGenerated default setter
+     * @param newCommande */
+   public void setCommande(java.util.Collection<Commande> newCommande) {
+      removeAllCommande();
+      for (java.util.Iterator iter = newCommande.iterator(); iter.hasNext();)
+         addCommande((Commande)iter.next());
+   }
+   
+   /** @pdGenerated default add
+     * @param newCommande */
+   public void addCommande(Commande newCommande) {
+      if (newCommande == null)
+         return;
+      if (this.commande == null)
+         this.commande = new java.util.HashSet<Commande>();
+      if (!this.commande.contains(newCommande))
+      {
+         this.commande.add(newCommande);
+         newCommande.setServeur(this);      
+      }
+   }
+   
+   /** @pdGenerated default remove
+     * @param oldCommande */
+   public void removeCommande(Commande oldCommande) {
+      if (oldCommande == null)
+         return;
+      if (this.commande != null)
+         if (this.commande.contains(oldCommande))
+         {
+            this.commande.remove(oldCommande);
+            oldCommande.setServeur((Serveur)null);
+         }
+   }
+   
+   /** @pdGenerated default removeAll */
+   public void removeAllCommande() {
+      if (commande != null)
+      {
+         Commande oldCommande;
+         for (java.util.Iterator iter = getIteratorCommande(); iter.hasNext();)
+         {
+            oldCommande = (Commande)iter.next();
+            iter.remove();
+            oldCommande.setServeur((Serveur)null);
+         }
+      }
+   }
+
+}

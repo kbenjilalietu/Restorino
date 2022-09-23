@@ -1,18 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:restorino/ui/admin/admin_home_page.dart';
 
 import '../../ui/caissier/caissier_home_page.dart';
 import '../../ui/cuisinier/cuisinier_home_page.dart';
 import '../../ui/serveur/interfaces/accueil/accueil_page.dart';
-import '../../ui/serveur/serveur_scaffold.dart';
 import '../../ui/connexion_ui/connexion.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class CheckLogin extends StatelessWidget {
 
-  Map<String, String> docIds = new Map();
+  Map<String, String> docIds = {};
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +24,7 @@ class CheckLogin extends StatelessWidget {
             if(docIds[user.uid]=="admin"){return AdminHome();}
             else if(docIds[user.uid]=="cuisinier"){return CuisinierHome();}
             else if(docIds[user.uid]=="caissier"){return CaissierHome();}
-            else if(docIds[user.uid]=="serveur"){return AccueilPageServeur();}
+            else if(docIds[user.uid]=="serveur"){return const AccueilPageServeur();}
             else{return Connexion();}
           }
           else{

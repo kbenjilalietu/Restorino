@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AdminHome extends StatelessWidget {
@@ -12,13 +11,13 @@ class AdminHome extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Text("Admin", style: TextStyle(fontSize: 30),),
-            Text(user.email.toString(), style: TextStyle(fontSize: 30),),
-            Text(user.uid, style: TextStyle(fontSize: 30),),
+            const Text("Admin", style: TextStyle(fontSize: 30),),
+            Text(user.email.toString(), style: const TextStyle(fontSize: 30),),
+            Text(user.uid, style: const TextStyle(fontSize: 30),),
             MaterialButton(onPressed: (){
               FirebaseAuth.instance.signOut();
 
-            }, child: Text("Déconnexion"),)
+            }, child: const Text("Déconnexion"),)
           ],
         ),
       ),

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
-import 'package:phosphor_flutter/phosphor_flutter.dart';
 
-import '../../../metier/serveur/app_route_observer.dart';
 import '../constants/page_titles.dart';
 import '../constants/route_names.dart';
 import 'drawer_item.dart';
@@ -42,9 +40,9 @@ class ServeurDrawer extends StatelessWidget {
                   DrawerItem(route:RouteNames.salade,icon: PhosphorIcons.flowerLotus, title:PageTitles.salade, permanentlyDisplay:permanentlyDisplay),
                   DrawerItem(route:RouteNames.dessert,icon: PhosphorIcons.cookie, title:PageTitles.dessert, permanentlyDisplay:permanentlyDisplay),
                   DrawerItem(route:RouteNames.boisson,icon: PhosphorIcons.coffee, title:PageTitles.boisson, permanentlyDisplay:permanentlyDisplay),
-                  LigneDrawer(),
-                  SizedBox(height: 120,),
-                  EndDrawer(),
+                  const LigneDrawer(),
+                  const SizedBox(height: 120,),
+                  const EndDrawer(),
                 ],
               ),
             if (permanentlyDisplay)

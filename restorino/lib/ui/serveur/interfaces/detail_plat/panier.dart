@@ -1,15 +1,21 @@
 import 'package:dotted_border/dotted_border.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:restorino/metier/serveur/traitement_commande/select_article.dart';
 import 'package:restorino/ui/theme/text_style_mali.dart';
 
+import '../../../../metier/serveur/bloc_traitement/counter_commande/counter_bloc.dart';
+import '../../../../metier/serveur/bloc_traitement/counter_commande/counter_state.dart';
+import '../../../../metier/serveur/bloc_traitement/panier_commande/panier_bloc.dart';
 import '../../../theme/constants_color.dart';
+import '../passer_commande/confirmer_commande.dart';
 import 'article_panier.dart';
 import 'dotted_horizontal_line.dart';
+import 'list_article_panier.dart';
 
 class Panier extends StatelessWidget {
-   Panier({Key? key, required this.heightWidget}) : super(key: key);
+  Panier({Key? key, required this.heightWidget}) : super(key: key);
   double heightWidget;
 
   @override
@@ -17,49 +23,42 @@ class Panier extends StatelessWidget {
     return // Generated code for this Stack Widget...
       Container(
         padding: const EdgeInsets.only(right: 20, top: 5, bottom: 15),
-          height: heightWidget,
         child: Stack(
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
               child: Material(
                 color: Colors.transparent,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6),
                 ),
                 child: DottedBorder(
-                  color: blueLightColor,
+                  color: blueColor,
                   strokeWidth: 1.8, //thickness of dash/dots
-                  dashPattern: [5,6],
-                  radius: Radius.circular(10),
+                  dashPattern: const [5,6],
                   child: Container(
-                    //height: heightWidget-50,
+                    height: heightWidget-55,
+                    width: 280,
+                    margin: EdgeInsets.symmetric(horizontal: 3),
                     color: Colors.transparent,
                       child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 85, 0, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(0, 85, 0, 0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Expanded(
-                                  child: SingleChildScrollView(
-                                        controller: ScrollController(),
-                                        child: Column(
-                                            children: [
-                                              ArticleDePanier(designation: 'Cheese Burger Blue', prix: '80',),
-                                              ArticleDePanier(designation: 'Cheese Burger', prix: '80',),
-                                              ArticleDePanier(designation: 'Cheese Burger', prix: '80',),
-                                              ArticleDePanier(designation: 'Cheese Burger', prix: '80',),
-                                    ],
-                                  ),
-                                        ),),
+                                ListViewArticlePanier(),
                                 Container(
                                   color: Colors.transparent,
-                                  padding: EdgeInsets.only(top:15,bottom: 15, right: 52, left: 52),
-                                  margin: EdgeInsets.all(2),
+                                  padding: const EdgeInsets.only(top:15,bottom: 15, right: 52, left: 52),
+                                  margin: const EdgeInsets.all(2),
                                   child: MaterialButton(
                                     onPressed: () {
-                                      print('Button pressed ...');
+                                      Navigator.push(context,
+                                          MaterialPageRoute(builder: (context) {
+                                            return ConfirmerCommande();
+                                          }
+                                          ));
                                     },
                                     child: Container(
                                       alignment: Alignment.center,
@@ -68,7 +67,7 @@ class Panier extends StatelessWidget {
                                       decoration: BoxDecoration(
                                           color: primaryDarkColor,
                                           borderRadius: BorderRadius.circular(5)),
-                                      child: Text(
+                                      child: const Text(
                                         'Passer',
                                         style: TextStyle(color: whiteColor, fontSize: 18),
                                       ),
@@ -86,14 +85,14 @@ class Panier extends StatelessWidget {
             Align(
               alignment: Alignment.topCenter,
               child: DottedBorder(
-                color: blueLightColor,
+                color: blueColor,
                 strokeWidth: 1.8, //thickness of dash/dots
-                dashPattern: [5,6],
-                radius: Radius.circular(10),
+                dashPattern: const [5,6],
+                radius: const Radius.circular(10),
                 child: Container(
                   color: whiteColorOpacity,
                   width: 193,
-                  height: 92,
+                  height: 96,
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -102,26 +101,26 @@ class Panier extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(width: 38,),
+                          const SizedBox(width: 38,),
                           Container(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 3),
+                            padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                             child: Text(
-                              '  Panier  ',
+                              ' Panier',
                               style: TextStyleMali(Colors.black, 24, FontWeight.w500)
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0, 0),
+                            alignment: const AlignmentDirectional(0, 0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 3, 0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                               child: IconButton(
-                                icon: Icon(
+                                icon: const Icon(
                                   PhosphorIcons.x,
                                   color: Colors.black,
                                   size: 25,
                                 ),
                                 onPressed: () {
-                                  print('IconButton pressed ...');
+                                  context.read<PanierBloc>().add(ChangeShowPanierEvent());
                                 },
                               ),
                             ),
@@ -134,17 +133,22 @@ class Panier extends StatelessWidget {
                       ),
                       Card(
                         elevation: 3,
-                        margin: EdgeInsets.only(top: 10),
+                        margin: const EdgeInsets.only(top: 5),
                         clipBehavior: Clip.antiAliasWithSaveLayer,
-                        color: Color(0xFFF5F2FD),
+                        color: const Color(0xFFF5F2FD),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(15, 4, 15, 4),
-                          child: Text(
-                            '80  DH',
-                            style: TextStyleMali(Colors.black, 20, FontWeight.bold)
+                          padding: const EdgeInsetsDirectional.fromSTEB(15, 4, 15, 4),
+                          child: BlocBuilder<CounterCommandeBloc, CounterCommandeState>(
+                              builder: (context, state) {
+                                return Container(
+                                    child: BlocBuilder<CounterQuantiteBloc, CounterQuantiteState>(
+                                        builder: (context, state) {
+                                          return
+                                            Text(
+                                                SelectArticle.getPriceOfAllArticleSelected().toString()+' DH',
+                                                style: TextStyleMali(Colors.black, 20, FontWeight.bold));}));})
                           ),
                         ),
-                      ),
                     ],
                   ),
                 ),

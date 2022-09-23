@@ -1,8 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:restorino/ui/all/boxImage.dart';
-import 'package:restorino/ui/connexion_ui/snack_bar_login.dart';
 
 import '../../metier/connexion/auth_service.dart';
 import '../theme/constants_color.dart';
@@ -16,8 +14,8 @@ class Connexion extends StatelessWidget {
   // not a GlobalKey<MyCustomFormState>.
   final _formKey = GlobalKey<FormState>();
 
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   Authentication authentication = Authentication();
 
   @override
@@ -26,13 +24,13 @@ class Connexion extends StatelessWidget {
         url: "https://firebasestorage.googleapis.com/v0/b/restorino-654fe.appspot.com/o/background.png?alt=media&token=5dec1cd2-f430-4829-aa41-11477aa5c19b",
         widget: Card(
             elevation: 50,
-            margin: EdgeInsets.fromLTRB(180, 70, 180, 70),
+            margin: const EdgeInsets.fromLTRB(180, 70, 180, 70),
             color: Colors.white,
             shape: RoundedRectangleBorder(
-              side: BorderSide(color: Colors.transparent, width: 1),
+              side: const BorderSide(color: Colors.transparent, width: 1),
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Container(
+            child: SizedBox(
               width: double.infinity,
               child: Row(children: [
                 Flexible(
@@ -47,7 +45,7 @@ class Connexion extends StatelessWidget {
                               padding: const EdgeInsets.fromLTRB(0, 0, 0, 45),
                               child: Text("Connexion",
                                 style: GoogleFonts.mali(
-                                    textStyle: TextStyle(
+                                    textStyle: const TextStyle(
                                         color: Colors.black,
                                         fontSize: 30,
                                         fontWeight: FontWeight.bold)),
@@ -64,7 +62,7 @@ class Connexion extends StatelessWidget {
                               },
                               autovalidateMode: AutovalidateMode.onUserInteraction,
                               keyboardType: TextInputType.emailAddress,
-                              style: TextStyle(color: Colors.black, fontSize: 16),
+                              style: const TextStyle(color: Colors.black, fontSize: 16),
                               controller: _emailController,
                               cursorColor: primaryDarkColor,
                               decoration: const InputDecoration(
@@ -94,7 +92,7 @@ class Connexion extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 28,
                             ),
                             // password textField
@@ -111,7 +109,7 @@ class Connexion extends StatelessWidget {
                               obscureText: true,
                               autocorrect: false,
                               enableSuggestions: false,
-                              style: TextStyle(color: Colors.black, fontSize: 16),
+                              style: const TextStyle(color: Colors.black, fontSize: 16),
                               controller: _passwordController,
                               cursorColor: primaryDarkColor,
                               decoration: const InputDecoration(
@@ -142,7 +140,7 @@ class Connexion extends StatelessWidget {
                               ),
                             ),
                             // se connecter button
-                            SizedBox(height: 45,),
+                            const SizedBox(height: 45,),
                             SizedBox(
                               width: double.infinity,
                               height: 45.0,
@@ -152,16 +150,16 @@ class Connexion extends StatelessWidget {
                                   if (_formKey.currentState!.validate()) {
                                     Authentication.signIn(_emailController.text, _passwordController.text, context);
                                   }},
-                                child: Text("Se connecter",
-                                  style: GoogleFonts.roboto(
-                                      textStyle: TextStyle(
-                                    color: primaryDarkColor,
-                                    fontSize: 20,
-                                  )),
-                                ),
                                 style: ButtonStyle(
                                   backgroundColor: MaterialStateColor.resolveWith(
                                       (states) => lightOrangeColor),
+                                ),
+                                child: Text("Se connecter",
+                                  style: GoogleFonts.roboto(
+                                      textStyle: const TextStyle(
+                                    color: primaryDarkColor,
+                                    fontSize: 20,
+                                  )),
                                 ),
                               ),
                             ),
@@ -171,7 +169,7 @@ class Connexion extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 35,),
+                const SizedBox(width: 35,),
                 Flexible(
                     child: BoxImage(
                       url: "https://firebasestorage.googleapis.com/v0/b/restorino-654fe.appspot.com/o/Mexican%20Food%20Festival%20(Poster).png?alt=media&token=195d38c3-195e-46a4-aa8c-1fe5d26216e8",

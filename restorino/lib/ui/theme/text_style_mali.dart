@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:restorino/ui/theme/constants_color.dart';
 
 TextStyle TextStyleMali(Color color, double fontSize,FontWeight fontWeight){
   return GoogleFonts.mali(

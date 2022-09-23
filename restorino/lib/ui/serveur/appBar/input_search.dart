@@ -6,31 +6,31 @@ import '../../theme/constants_color.dart';
 Widget inputSearch(){
   return  Flexible(
     child: Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 20, 0),
-      child: Container(
+      padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 20, 0),
+      child: SizedBox(
         height: 33,
         child:TextFormField(
           cursorHeight: 20,
         obscureText: false,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-          hintStyle: TextStyle(fontSize: 16),
+          contentPadding: const EdgeInsets.fromLTRB(10, 10, 0, 0),
+          hintStyle: const TextStyle(fontSize: 16),
           hintText: 'Recherhcer',
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: blueLightColor,
+            borderSide: const BorderSide(
+              color: blueColor,
               width: 2,
             ),
             borderRadius: BorderRadius.circular(4),
           ),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: primaryDarkColor,
               width: 2,
             ),
             borderRadius: BorderRadius.circular(4),
           ),
-          prefixIcon: Icon(
+          prefixIcon: const Icon(
             PhosphorIcons.magnifyingGlass,
             size: 20,
           ),

@@ -1,28 +1,29 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:restorino/ui/theme/constants_color.dart';
 import 'package:restorino/ui/theme/text_style_mali.dart';
 
+import '../../../../metier/models/article.dart';
+import '../../../../metier/serveur/bloc_traitement/counter_commande/counter_bloc.dart';
+import '../../../../metier/serveur/bloc_traitement/counter_commande/counter_event.dart';
+import '../../../../metier/serveur/traitement_commande/select_article.dart';
 import '../../../theme/text_style_saira.dart';
 
 class CardAccopagnement extends StatelessWidget {
-  String prix;
-  String designation;
-  String categorie;
-  String urlPhoto;
-  CardAccopagnement({Key? key, required this.prix, required this.categorie, required this.designation, required this.urlPhoto}) : super(key: key);
+  Article article;
+  CardAccopagnement({Key? key, required this.article}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 34, 12),
+      padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 34, 12),
       child: Container(
         width: 210,
         height: 245,
         decoration: BoxDecoration(
           color: lightPurpleColor,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 4,
               color: shadowColor,
@@ -32,8 +33,9 @@ class CardAccopagnement extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(12, 12, 0, 2),
+          padding: const EdgeInsetsDirectional.fromSTEB(12, 12, 0, 2),
             child: SingleChildScrollView(
+              physics: const NeverScrollableScrollPhysics(),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,7 +45,7 @@ class CardAccopagnement extends StatelessWidget {
                       Align(
                         alignment: Alignment.center,
                         child: Container(
-                          margin: EdgeInsets.only(right: 10),
+                          margin: const EdgeInsets.only(right: 10),
                           child: Material(
                             color: Colors.transparent,
                             elevation: 3,
@@ -63,12 +65,12 @@ class CardAccopagnement extends StatelessWidget {
                                 width: 130,
                                 height: 130,
                                 clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
                                 child: Image.network(
                                   fit: BoxFit.fill,
-                                  urlPhoto
+                                  article.photo!
                                 ),
                               ),
                             ),
@@ -78,13 +80,13 @@ class CardAccopagnement extends StatelessWidget {
                       Align(
                         alignment: Alignment.topRight,
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                           child: Container(
                             alignment: Alignment.centerRight,
                             width: 90,
-                            height: 26,
-                            margin: EdgeInsets.only(right:0),
-                            decoration: BoxDecoration(
+                            height: 28,
+                            margin: const EdgeInsets.only(right:0),
+                            decoration: const BoxDecoration(
                               color: darkOrangeColor,
                               boxShadow: [
                                 BoxShadow(
@@ -102,9 +104,9 @@ class CardAccopagnement extends StatelessWidget {
                             ),
                             child: Center(
                               child: Text(
-                                prix,
+                                "${article.prix!} DH",
                                 textAlign: TextAlign.center,
-                                style: TextStyleMali(Colors.black, 14, FontWeight.bold),
+                                style: TextStyleMali(Colors.black, 15, FontWeight.bold),
                               ),
                             ),
                           ),
@@ -113,9 +115,9 @@ class CardAccopagnement extends StatelessWidget {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                     child: Text(
-                      categorie, style: TextStyleMali(primaryDarkColor, 13, FontWeight.bold),),
+                      article.categorie!, style: TextStyleMali(primaryDarkColor, 13, FontWeight.bold),),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -125,26 +127,27 @@ class CardAccopagnement extends StatelessWidget {
                           crossAxisAlignment:CrossAxisAlignment.start,
                             children: [
                               Text(
-                                designation,
+                                article.designation!,
                                 style: TextStyleSaira(Colors.black, 16),
                               ),
-                              SizedBox(height: 30,)
+                              const SizedBox(height: 30,)
                             ],
                           ),
                         ),
                         Column(
                           children: [
-                            SizedBox(height: 16,),
+                            const SizedBox(height: 16,),
                             Container(
-                              padding: EdgeInsets.fromLTRB(0, 0, 10, 10),
+                              padding: const EdgeInsets.fromLTRB(0, 0, 5, 10),
                               child: IconButton(
-                                icon: Icon(
+                                icon: const Icon(
                                   PhosphorIcons.plusCircle,
-                                  color: blueLightColor,
+                                  color: blueColor,
                                   size: 28,
                                 ),
                                 onPressed: () {
-                                  print('IconButton pressed ...');
+                                  SelectArticle.addLigneCommandeToCommande(article: article, quantite: 1, );
+                                  context.read<CounterCommandeBloc>().add(CommandeNumberEvent());
                                 },
                               ),
                             ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:restorino/ui/theme/constants_color.dart';
 
 import '../../../metier/serveur/app_route_observer.dart';
-import '../constants/route_names.dart';
 
 class DrawerItem extends StatefulWidget {
   final String route;
@@ -76,16 +75,16 @@ class _DrawerItemState extends State<DrawerItem> with RouteAware {
                   alignment: Alignment.centerLeft,
                   height: 38,
                   padding: EdgeInsets.zero,
-                  margin: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                  margin: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                   decoration: BoxDecoration(
                     border: Border(
                       left: _selectedRoute == widget.route
-                          ? BorderSide(color: lightOrangeColor, width: 3)
-                          : BorderSide(color: Colors.transparent, width: 0),
+                          ? const BorderSide(color: lightOrangeColor, width: 3)
+                          : const BorderSide(color: Colors.transparent, width: 0),
                     ),
                   )),
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 3, 14, 4),
+                padding: const EdgeInsets.fromLTRB(20, 3, 14, 4),
                 child: Icon(
                   widget.icon,
                   color: _selectedRoute != widget.route
@@ -99,8 +98,8 @@ class _DrawerItemState extends State<DrawerItem> with RouteAware {
                 child: Text(
                   widget.title,
                   style: _selectedRoute != widget.route
-                      ? TextStyle(color: whiteColor)
-                      : TextStyle(
+                      ? const TextStyle(color: whiteColor)
+                      : const TextStyle(
                           color: lightOrangeColor,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),

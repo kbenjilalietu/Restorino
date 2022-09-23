@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:restorino/ui/theme/constants_color.dart';
 import 'package:restorino/ui/theme/text_style_mali.dart';
@@ -19,7 +18,7 @@ class EndDrawer extends StatelessWidget {
               width: 120,
               height: 120,
               clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
               ),
               child: Image.network(
@@ -35,7 +34,7 @@ class EndDrawer extends StatelessWidget {
                   style: TextStyleMali(whiteColor, 13, FontWeight.bold),
                 ),
               ),
-              Text(
+              const Text(
                 "Server",
                 style: TextStyle(color: Colors.grey, fontSize: 11),
               )

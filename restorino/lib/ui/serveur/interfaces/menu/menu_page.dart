@@ -1,11 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:restorino/ui/serveur/interfaces/menu/tab_bar_boisson.dart';
-import 'package:restorino/ui/serveur/interfaces/menu/tab_bar_plat.dart';
 import 'package:restorino/ui/theme/constants_color.dart';
 import 'package:restorino/ui/theme/text_style_mali.dart';
 import '../../appBar/input_search.dart';
 import '../../serveur_scaffold.dart';
+import '../decoration/circular_progress.dart';
 import '../shaps/square.dart';
 import 'dashed_box_menu.dart';
 
@@ -22,20 +22,39 @@ class MenuPage extends StatelessWidget {
           children: [
             Row(
               children: [
-                Padding(
+                const Padding(
                   padding: EdgeInsets.fromLTRB(40, 30, 20, 30),
                   child: Square(),
                 ),
                 Text(
                   "Choisir votre menu !",
-                  style: TextStyleMali(primaryDarkColor, 24, FontWeight.normal),
+                  style: TextStyleMali(primaryDarkColor, 26, FontWeight.normal),
                 )
               ],
             ),
-            DashedBoxMenu(title: "Plats", widget:TabBarPlat()),
-            DashedBoxMenu(title: "Salade", widget: Center(child:Text("Salade"))),
-            DashedBoxMenu(title: "Desserts", widget: Center(child:Text("Dessert"))),
-            DashedBoxMenu(title: "Boisson", widget: TabBarBoisson()),
+            StreamBuilder(
+                stream: FirebaseFirestore.instance.collection("categorie").snapshots(),
+                builder: (context, snapshot){
+                  if(snapshot.hasError)
+                    {
+                      return Center(child: Text(snapshot.error.toString()),);
+                    }
+                  if(!snapshot.hasData){
+                    return CircularProgress();
+                  }
+                  QuerySnapshot data = snapshot.requireData as QuerySnapshot;
+                  return SizedBox(
+                    height: MediaQuery.of(context).size.height,
+                      child: ListView.builder(
+                          itemCount: data.size,
+                          itemBuilder: (context, index){
+                            Map categories = data.docs[index].data() as Map;
+                            return
+                              DashedBoxMenu(title: categories["libelle"]);
+                          },
+
+                      ));
+                })
           ],
         ),
       ),

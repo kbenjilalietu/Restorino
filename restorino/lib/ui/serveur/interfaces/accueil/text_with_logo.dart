@@ -13,14 +13,14 @@ class TextWithLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(
+        const SizedBox(
           width: 30,
         ),
         Icon(
           icon,
           color: primaryDarkColor,
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Text(

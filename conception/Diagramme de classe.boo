@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{5401059A-435D-4977-AC89-02C43DAECC27}" Label="" LastModificationDate="1660909956" Name="Diagramme de classe " Objects="74" Symbols="27" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{5401059A-435D-4977-AC89-02C43DAECC27}" Label="" LastModificationDate="1662494448" Name="Diagramme de classe " Objects="73" Symbols="26" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -12,7 +12,7 @@
 <a:Code>Diagramme_de_classe</a:Code>
 <a:CreationDate>1658745783</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1660907675</a:ModificationDate>
+<a:ModificationDate>1660910078</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
 <a:PackageOptionsText>[FolderOptions]
 
@@ -2156,7 +2156,7 @@ PreserveMode=Yes</a:ModelOptionsText>
 <a:Code>DiagrammeClasses_1</a:Code>
 <a:CreationDate>1658745783</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1660905773</a:ModificationDate>
+<a:ModificationDate>1660910078</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
 <a:DisplayPreferences>[DisplayPreferences]
 
@@ -2856,15 +2856,15 @@ MULA 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:AssociationSymbol>
 <o:AssociationClassLinkSymbol Id="o47">
-<a:CreationDate>1660905773</a:CreationDate>
-<a:ModificationDate>1660907592</a:ModificationDate>
-<a:Rect>((-418,4700), (-80,9549))</a:Rect>
-<a:ListOfPoints>((-80,4700),(-418,4700),(-418,9549))</a:ListOfPoints>
+<a:CreationDate>1660910069</a:CreationDate>
+<a:ModificationDate>1660910090</a:ModificationDate>
+<a:Rect>((-343,4700), (-80,10824))</a:Rect>
+<a:ListOfPoints>((-80,4700),(-343,4700),(-343,10824))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>0</a:ArrowStyle>
 <a:LineColor>0</a:LineColor>
 <a:DashStyle>2</a:DashStyle>
-<a:ShadowColor>0</a:ShadowColor>
+<a:ShadowColor>12632256</a:ShadowColor>
 <c:SourceSymbol>
 <o:AssociationSymbol Ref="o10"/>
 </c:SourceSymbol>
@@ -3174,7 +3174,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>Article</a:Code>
 <a:CreationDate>1658745793</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1660394233</a:ModificationDate>
+<a:ModificationDate>1660910078</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
 <a:UseParentNamespace>0</a:UseParentNamespace>
 <c:Attributes>
@@ -3184,9 +3184,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>idArticle</a:Code>
 <a:CreationDate>1658915431</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1658915548</a:ModificationDate>
+<a:ModificationDate>1662475081</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
-<a:DataType>int</a:DataType>
+<a:DataType>String</a:DataType>
 <a:Attribute.Visibility>-</a:Attribute.Visibility>
 </o:Attribute>
 <o:Attribute Id="o63">
@@ -3250,9 +3250,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>tempsAjout</a:Code>
 <a:CreationDate>1660394216</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1660394233</a:ModificationDate>
+<a:ModificationDate>1662475094</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
-<a:DataType>int</a:DataType>
+<a:DataType>Date</a:DataType>
 <a:Attribute.Visibility>-</a:Attribute.Visibility>
 </o:Attribute>
 <o:Attribute Id="o69">
@@ -3284,9 +3284,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>idCategorie</a:Code>
 <a:CreationDate>1659011966</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1659011994</a:ModificationDate>
+<a:ModificationDate>1662475066</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
-<a:DataType>int</a:DataType>
+<a:DataType>String</a:DataType>
 <a:Attribute.Visibility>-</a:Attribute.Visibility>
 </o:Attribute>
 <o:Attribute Id="o71">
@@ -3308,7 +3308,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>Commande</a:Code>
 <a:CreationDate>1658745795</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1659957499</a:ModificationDate>
+<a:ModificationDate>1660910078</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
 <a:UseParentNamespace>0</a:UseParentNamespace>
 <c:Attributes>
@@ -3473,9 +3473,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>photoPerso</a:Code>
 <a:CreationDate>1660394190</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1660394210</a:ModificationDate>
+<a:ModificationDate>1662475007</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
-<a:DataType>int</a:DataType>
+<a:DataType>String</a:DataType>
 <a:Attribute.Visibility>-</a:Attribute.Visibility>
 </o:Attribute>
 </c:Attributes>
@@ -3496,9 +3496,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>numFacture</a:Code>
 <a:CreationDate>1658915643</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1658915708</a:ModificationDate>
+<a:ModificationDate>1662475051</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
-<a:DataType>int</a:DataType>
+<a:DataType>String</a:DataType>
 <a:Attribute.Visibility>-</a:Attribute.Visibility>
 </o:Attribute>
 <o:Attribute Id="o87">
@@ -3552,9 +3552,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>idTable</a:Code>
 <a:CreationDate>1660907822</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1660907849</a:ModificationDate>
+<a:ModificationDate>1662475031</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
-<a:DataType>int</a:DataType>
+<a:DataType>String</a:DataType>
 <a:Attribute.Visibility>-</a:Attribute.Visibility>
 </o:Attribute>
 <o:Attribute Id="o91">
@@ -3563,9 +3563,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>numTable</a:Code>
 <a:CreationDate>1658916076</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1660907817</a:ModificationDate>
+<a:ModificationDate>1662494448</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
-<a:DataType>String</a:DataType>
+<a:DataType>int</a:DataType>
 <a:Attribute.Visibility>-</a:Attribute.Visibility>
 </o:Attribute>
 </c:Attributes>
@@ -3576,7 +3576,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>LigneCommande</a:Code>
 <a:CreationDate>1659100323</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1659101004</a:ModificationDate>
+<a:ModificationDate>1660910078</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
 <a:UseParentNamespace>0</a:UseParentNamespace>
 <c:Attributes>
@@ -3649,9 +3649,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>idSousCategorie</a:Code>
 <a:CreationDate>1660054109</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1660054157</a:ModificationDate>
+<a:ModificationDate>1662475107</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
-<a:DataType>int</a:DataType>
+<a:DataType>String</a:DataType>
 <a:Attribute.Visibility>-</a:Attribute.Visibility>
 </o:Attribute>
 <o:Attribute Id="o94">
@@ -3675,7 +3675,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>constituer</a:Code>
 <a:CreationDate>1659031064</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1660905773</a:ModificationDate>
+<a:ModificationDate>1662464845</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
 <a:RoleAMultiplicity>0..*</a:RoleAMultiplicity>
 <a:RoleBMultiplicity>1..*</a:RoleBMultiplicity>
@@ -3944,10 +3944,10 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Generalizations>
 <c:AssociationClassLinks>
 <o:AssociationClassLink Id="o49">
-<a:ObjectID>9FEB14F3-FA02-4EBF-AFD5-72F0E4179450</a:ObjectID>
-<a:CreationDate>1660905773</a:CreationDate>
+<a:ObjectID>A0CE8F4C-E220-4E9F-B887-CD5ACFF22126</a:ObjectID>
+<a:CreationDate>1660910069</a:CreationDate>
 <a:Creator>dell</a:Creator>
-<a:ModificationDate>1660905773</a:ModificationDate>
+<a:ModificationDate>1660910078</a:ModificationDate>
 <a:Modifier>dell</a:Modifier>
 <c:Object1>
 <o:Class Ref="o56"/>

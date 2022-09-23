@@ -8,7 +8,7 @@ class Square extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Icon(
+    return const Icon(
       PhosphorIcons.squareFill,
       color: lightOrangeColor,
       size: 20,

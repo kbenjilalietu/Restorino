@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DrawDottedhorizontalline extends CustomPainter {
@@ -14,8 +13,9 @@ class DrawDottedhorizontalline extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     for (double i = -60; i < 60; i = i + 15) {
       // 15 is space between dots
-      if (i % 3 == 0)
+      if (i % 3 == 0) {
         canvas.drawLine(Offset(i, 0.0), Offset(i + 10, 0.0), _paint!);
+      }
     }
   }
 

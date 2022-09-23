@@ -10,23 +10,19 @@ ThemeData themeApp(){
         color: Colors.white,
         thickness: 1,
       ),
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       backgroundColor: whiteColor,
       elevation: 5,
       shadowColor: shadowColor,
       iconTheme: IconThemeData(color:primaryDarkColor),
     ),
-    drawerTheme: DrawerThemeData(
+    drawerTheme: const DrawerThemeData(
       backgroundColor: primaryDarkColor,
       elevation: 0,
     ),
     pageTransitionsTheme: PageTransitionsTheme(
       // makes all platforms that can run Flutter apps display routes without any animation
-      builders: Map<TargetPlatform,
-          _InanimatePageTransitionsBuilder>.fromIterable(
-          TargetPlatform.values.toList(),
-          key: (dynamic k) => k,
-          value: (dynamic _) => const _InanimatePageTransitionsBuilder()),
+      builders: { for (var k in TargetPlatform.values.toList()) k : const _InanimatePageTransitionsBuilder() },
     ),
   );
 }

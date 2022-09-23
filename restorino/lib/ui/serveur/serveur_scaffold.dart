@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'appBar/appBar.dart';
-import 'appBar/text_appBar.dart';
 import 'drawer/serveur_drawer.dart';
 
 
@@ -26,7 +25,7 @@ class ServeurScaffold extends StatelessWidget {
         Expanded(
           child: Scaffold(
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(46.0), // here the desired height
+              preferredSize: const Size.fromHeight(46.0), //  here the desired height
               child: AppBar(
                 title: AppBarWidget(widgetAppBar: elementOfAppBar,),
                 // when the app isn't displaying the mobile version of app, hide the menu button that is used to open the navigation drawer

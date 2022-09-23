@@ -1,9 +1,14 @@
+import 'package:essaipfa/tabBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'button_change/essai_sousCategorie.dart';
 import 'button_change/tab_bar_example.dart';
 import 'button_change/tab_souscategorie.dart';
+import 'counter.dart';
+import 'dialog/alert.dart';
+import 'essaiTabar.dart';
+import 'onchange.dart';
 
 void main() => runApp(DemoApp());
 
@@ -27,7 +32,7 @@ class DemoApp extends StatelessWidget {
               value: (dynamic _) => const _InanimatePageTransitionsBuilder()),
         ),
       ),
-      home: Example(),
+      home: MyHomePageOnChange(title: 'first',),
       /*
       initialRoute: RouteNames.home,
       navigatorObservers: [AppRouteObserver()],

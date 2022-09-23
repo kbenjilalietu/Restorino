@@ -15,9 +15,14 @@
 		<Model Expanded="Yes" ID="{77956CD7-8126-4C60-8155-EB8DE33C05BD}" Loaded="No" Name="authentification" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="DS global.moo"/>
 		<Model Expanded="Yes" ID="{D94D5FF5-C638-43C4-A123-D5DA33362DFD}" Loaded="No" Name="Passer une commande" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Passer une commande.moo"/>
 		<Model Expanded="Yes" ID="{5401059A-435D-4977-AC89-02C43DAECC27}" Name="Diagramme de classe " Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Diagramme de classe.moo"/>
-		<Model Expanded="Yes" ID="{9FA5E49F-FBDA-42B3-809A-7C1AFD17955F}" Name="modelxml" Type="{029EAF0C-06EE-4282-8CB2-D70732085DEF}" URL="modelxml.msx"/>
-		<Model Expanded="Yes" ID="{93541BB6-CF61-4B9A-B2B5-A1882001DD9F}" Name="Diagramme de classe" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="Diagramme de classe.mcd"/>
-		<Model Expanded="Yes" ID="{5EA972DB-386E-4216-AEF0-4697856730C9}" Name="Diagramme de classe" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="Diagramme de classe.mpd"/>
+		<Model Expanded="Yes" ID="{9FA5E49F-FBDA-42B3-809A-7C1AFD17955F}" Loaded="No" Name="modelxml" Type="{029EAF0C-06EE-4282-8CB2-D70732085DEF}" URL="modelxml.msx"/>
+		<Model ID="{93541BB6-CF61-4B9A-B2B5-A1882001DD9F}" Loaded="No" Name="Diagramme de classe" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="Diagramme de classe.mcd"/>
+		<Model ID="{5EA972DB-386E-4216-AEF0-4697856730C9}" Loaded="No" Name="Diagramme de classe" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="Diagramme de classe.mpd"/>
+		<Model ID="{C5144CD2-1B0C-4C23-9843-48F50A347DE5}" Name="essaiDC" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="essaiDC.moo"/>
+		<Model Expanded="Yes" ID="{7297B271-2208-468C-A236-47B80D5FE065}" Name="essaiMCD" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="essaiMCD.mcd"/>
+		<Model ID="{B1E35F53-1107-4CEB-9B77-3DDBD1D965A8}" Name="essaiMLD" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" URL="essaiMLD.mld"/>
+		<Model ID="{5FD084D4-C829-426E-8F96-90DB054CB36C}" Name="essaiMLD2" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" URL="essaiMLD2.mld"/>
+		<Model ID="{44EDAB35-9C45-4568-A19D-7A262FCEC167}" Name="essaiMLD2" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="essaiMLD2.mpd"/>
 	</Local>
 	<BrowserModule Name="Référentiel"/>
 </Workspace>

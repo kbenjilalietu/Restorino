@@ -1,28 +1,31 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
+import '../../../../metier/models/article.dart';
+import '../../../../metier/serveur/bloc_traitement/counter_commande/counter_bloc.dart';
+import '../../../../metier/serveur/bloc_traitement/counter_commande/counter_event.dart';
+import '../../../../metier/serveur/traitement_commande/select_article.dart';
 import '../../../theme/constants_color.dart';
 import '../../../theme/text_style_mali.dart';
 
 class ArticleDePanier extends StatelessWidget {
-  String designation;
-  String prix;
-  ArticleDePanier({Key? key, required this.designation, required this.prix}) : super(key: key);
+  Article article;
+  ArticleDePanier({Key? key, required this.article}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return  Stack(
       children: [
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(18, 10, 16, 15),
+          padding: const EdgeInsetsDirectional.fromSTEB(18, 10, 16, 15),
           child: Container(
             width: 228,
             height: 140,
             decoration: BoxDecoration(
               color: Colors.white,
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   blurRadius: 4,
                   color: Color(0x2B202529),
@@ -31,7 +34,7 @@ class ArticleDePanier extends StatelessWidget {
               ],
               borderRadius: BorderRadius.circular(8),
               border: Border.all(
-                color: Color(0xFFF5F1FD),
+                color: const Color(0xFFF5F1FD),
               ),
             ),
             child: Column(
@@ -41,9 +44,9 @@ class ArticleDePanier extends StatelessWidget {
                 Expanded(
                   child: Center(
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Text(
-                        designation,
+                        article.designation!,
                         textAlign: TextAlign.center,
                         style: TextStyleMali(Colors.black, 20, FontWeight.w600)
                       ),
@@ -53,7 +56,7 @@ class ArticleDePanier extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 40,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: orangeColorOpacity,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(5),
@@ -63,10 +66,10 @@ class ArticleDePanier extends StatelessWidget {
                     ),
                   ),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(
+                    padding: const EdgeInsetsDirectional.fromSTEB(
                         0, 8, 0, 0),
                     child: Text(
-                      '80 DH',
+                      article.prix! + ' DH',
                       textAlign: TextAlign.center,
                       style: TextStyleMali(Colors.black, 18, FontWeight.bold),
                     ),
@@ -81,14 +84,14 @@ class ArticleDePanier extends StatelessWidget {
           child: Align(
             alignment: Alignment.topRight,
             child: Container(
-              margin: EdgeInsets.only(bottom: 20),
+              margin: const EdgeInsets.only(bottom: 20),
               width: 36,
               height: 35.5,
               decoration: BoxDecoration(
                   color: orangeColorOpacity,
                   borderRadius: BorderRadius.circular(150),
                   border: Border.all(color: whiteColor, width: 1),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       blurRadius: 20,
                       color: shadowColor,
@@ -98,13 +101,15 @@ class ArticleDePanier extends StatelessWidget {
 
               ),
               child: IconButton(
-                icon: FaIcon(
+                icon: const FaIcon(
                   PhosphorIcons.x,
                   color: Colors.black,
                   size: 17,
                 ),
                 onPressed: () {
-                  print('IconButton pressed ...');
+                  SelectArticle.removeArticleFromCommande(article: article);
+                  context.read<CounterCommandeBloc>().add(CommandeNumberEvent());
+                  context.read<CounterQuantiteBloc>().add(GetQuantiteEvent(article: article));
                 },
               ),
             ),

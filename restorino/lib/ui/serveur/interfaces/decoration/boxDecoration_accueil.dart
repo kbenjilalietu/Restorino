@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import '../../../theme/constants_color.dart';
 
 BoxDecoration boxDecorationAccueil(){
-return BoxDecoration(
+return const BoxDecoration(
       color: purpleColorSecend,
       boxShadow: [
         BoxShadow(

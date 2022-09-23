@@ -8,8 +8,8 @@ Widget textAppBar() {
     return Row(
       children: [
         Container(
-            padding: EdgeInsets.fromLTRB(15, 0, 10, 0),
-            child: Icon(PhosphorIcons.arrowBendDownRightBold, color: primaryDarkColor,)),
+            padding: const EdgeInsets.fromLTRB(15, 0, 10, 0),
+            child: const Icon(PhosphorIcons.arrowBendDownRightBold, color: primaryDarkColor,)),
         Text("Menu du jour", style: TextStyleMali(primaryDarkColor, 18, FontWeight.bold),),
       ],
     );

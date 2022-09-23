@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LigneDrawer extends StatelessWidget {
@@ -7,8 +6,8 @@ class LigneDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 2),
-      decoration:  BoxDecoration(
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 2),
+      decoration:  const BoxDecoration(
         border: Border(
           top: BorderSide(
             color: Colors.white,
