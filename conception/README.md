@@ -62,22 +62,28 @@ L’application possède quatre utilisateurs avec les fonctionnalités suivantes
 
 ### 4. Dictionnaire de données 
 
-- Tableau : Dictionnaire de données de la classe « Personne » 
+- Tableau : Dictionnaire de données de la classe « Personne »
+
 ![image](https://github.com/kbenjilalietu/Restorino/assets/81255636/63a44d18-ee1e-41e1-a918-e885b5199778)
 
 - Tableau : Dictionnaire de données de la classe « Commande » 
+
 ![image](https://github.com/kbenjilalietu/Restorino/assets/81255636/926f4db1-f1c0-4e37-9e15-4aa58859ab7b)
 
 - Tableau : Dictionnaire de données de la classe « Ligne de Commande »
+
 ![image](https://github.com/kbenjilalietu/Restorino/assets/81255636/5f457f80-1671-4d6c-a2cb-99aa67227946)
 
 - Tableau : Dictionnaire de données de la classe « Article» 
+
 ![image](https://github.com/kbenjilalietu/Restorino/assets/81255636/4192317a-34c5-4b6d-bec0-781885d52408)
 
 - Tableau : Dictionnaire de données de la classe « Table» 
+
 ![image](https://github.com/kbenjilalietu/Restorino/assets/81255636/203fea06-deb3-45ed-b997-e61478dd01f0)
 
 - Tableau : Dictionnaire de données de la classe « Facture»
+
 ![image](https://github.com/kbenjilalietu/Restorino/assets/81255636/0bc7cee4-2910-44af-a8b7-28d7ea818a3d)
 
 - Tableau : Dictionnaire de données de la classe « Catégorie»
