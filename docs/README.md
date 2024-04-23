@@ -4,7 +4,26 @@
 
 > Restorino est une application mobile révolutionnaire conçue pour simplifier la gestion quotidienne des restaurants. En unifiant les différentes tâches, telles que la prise de commandes, la gestion des menus, et la coordination entre le personnel de service et de cuisine, Restorino optimise la qualité du service à table tout en réduisant les erreurs et les délais. Grâce à son interface conviviale et ses fonctionnalités intuitives, cette plateforme numérique permet aux clients de parcourir le menu, de passer commande de manière autonome, et aux employés de gérer efficacement les opérations du restaurant. Avec Restorino, la restauration devient une expérience fluide et sans accroc, tant pour les gestionnaires que pour les convives.
 
+>	**utilisateurs de Restorino**
+
+L’application possède quatre utilisateurs avec les fonctionnalités suivantes:
+
 ![image](https://github.com/kbenjilalietu/Restorino/assets/81255636/63be440b-2acf-4c69-916c-d04f360b7ac2)
+
+#### -	Serveur :
+  -	Visualiser menu du restaurant avec la possibilité de passer une commande, modifier ou annuler cette commande
+  -	Spécifier si la commande est sur table ou à emporter.
+  -	Visualiser le code wifi du restaurant.
+#### -	Cuisinier :
+  -	Visualiser les commandes en détails avec le numéro de la table.
+  -	Changer l’état de commande (traité ou non traité).
+#### -	Caissier :
+  -	Visualiser les commandes traitées.
+  -	Changer l’état de paiement (payé ou non).
+#### -	Admin :
+  -	Gérer les comptes (caissier, serveurs, cuisiner, admin).
+  -	CRUD (create, remove, update, delete) des articles, catégories, employés, etc.
+  -	Visualiser les statistiques ventes (par jour, mois et année).
 
 ##	Interfaces de l’application Restorino
 
