@@ -4,6 +4,8 @@
 
 > Restorino est une application mobile révolutionnaire conçue pour simplifier la gestion quotidienne des restaurants. En unifiant les différentes tâches, telles que la prise de commandes, la gestion des menus, et la coordination entre le personnel de service et de cuisine, Restorino optimise la qualité du service à table tout en réduisant les erreurs et les délais. Grâce à son interface conviviale et ses fonctionnalités intuitives, cette plateforme numérique permet aux clients de parcourir le menu, de passer commande de manière autonome, et aux employés de gérer efficacement les opérations du restaurant. Avec Restorino, la restauration devient une expérience fluide et sans accroc, tant pour les gestionnaires que pour les convives.
 
+![image](https://github.com/kbenjilalietu/Restorino/assets/81255636/63be440b-2acf-4c69-916c-d04f360b7ac2)
+
 ##	Interfaces de l’application Restorino
 
 > **Connexion à l’application**
