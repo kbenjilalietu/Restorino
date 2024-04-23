@@ -91,4 +91,5 @@ L’application possède quatre utilisateurs avec les fonctionnalités suivantes
 ![image](https://github.com/kbenjilalietu/Restorino/assets/81255636/dcd7b2e9-8ae9-486d-b3bd-62f2e58396e1)
 
 - Tableau : Dictionnaire de données de la classe « SousCatégorie»
+
 ![image](https://github.com/kbenjilalietu/Restorino/assets/81255636/50f58169-52eb-4260-84df-6817e762bcae)
