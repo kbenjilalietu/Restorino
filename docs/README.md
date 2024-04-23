@@ -8,7 +8,7 @@
 
 L’application possède quatre utilisateurs avec les fonctionnalités suivantes:
 
-![image](https://github.com/kbenjilalietu/Restorino/assets/81255636/63be440b-2acf-4c69-916c-d04f360b7ac2)
+![image](https://github.com/kbenjilalietu/Restorino/assets/81255636/75893669-b49d-4b4b-ac89-60ba39c5559b)
 
 #### -	Serveur :
   -	Visualiser menu du restaurant avec la possibilité de passer une commande, modifier ou annuler cette commande
